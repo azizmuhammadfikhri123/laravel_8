@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Siswa;
-// use App\Models\Rayon;
+use App\Models\Rayon;
+use App\Models\Siswa_view;
 
 class SiswaController extends Controller
 {
@@ -15,7 +16,7 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        $data = Siswa::all();
+        $data = Siswa_view::all();
         return view('siswa.index', compact('data'));
     }
 

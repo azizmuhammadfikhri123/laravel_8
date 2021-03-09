@@ -11,6 +11,7 @@
                     <th scope="col">Alamat</th>
                     <th scope="col">No HP</th>
                     <th scope="col">Rayon</th>
+                    <th scope="col">Pembimbing</th>
                     <th scope="col">Rombel</th>
                     <th scope="col">Aksi</th>
                 </tr>
@@ -21,7 +22,8 @@
                     <td>{{$item->nama}}</td>
                     <td>{{$item->alamat}}</td>
                     <td>{{$item->no_hp}}</td>
-                    <td>{{$item->id_rayon}}</td>
+                    <td>{{$item->nama_rayon}}</td>
+                    <td>{{$item->pembimbing}}</td>
                     <td>{{$item->rombel}}</td>
                     <td>
                         <a href="{{url('/siswa/edit/'. $item->id)}}" class="btn btn-warning">edit</a>

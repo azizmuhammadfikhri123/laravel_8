@@ -19,7 +19,11 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">id rayon</label>
-                    <input type="text" class="form-control" id="id_rayon" name="id_rayon" placeholder="Masukan id rayon">
+                    <select name="id_rayon">
+                        @foreach ($rayon as $item)
+                            <option value="{{$item->id}}">{{$item->nama_rayon}}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Rombel</label>
