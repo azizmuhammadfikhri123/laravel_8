@@ -25,4 +25,10 @@ Route::get('/siswa/edit/{id}', [SC::class, 'edit'])->name('siswa.edit');
 Route::patch('/siswa/{id}/update', [SC::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/delete/{id}', [SC::class, 'destroy'])->name('siswa.delete');
 
-Route::get('/rayon', [RC::class, 'index']);
+Route::get('/rayon', [RC::class, 'index'])->name('rayon.index');
+Route::get('/rayon/create', [RC::class, 'create'])->name('rayon.create');
+Route::post('/rayon/store', [RC::class, 'store'])->name('rayon.store');
+Route::get('/rayon/edit/{id}', [RC::class, 'edit'])->name('rayon.edit');
+Route::patch('/rayon/{id}/update', [RC::class, 'update'])->name('rayon.update');
+Route::delete('/rayon/delete/{id}', [RC::class, 'destroy'])->name('rayon.destroy');
+

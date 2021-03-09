@@ -14,7 +14,8 @@ class RayonController extends Controller
      */
     public function index()
     {
-        //
+        $data = Rayon::all();
+        return view('rayon.index', compact('data'));
     }
 
     /**
@@ -24,7 +25,7 @@ class RayonController extends Controller
      */
     public function create()
     {
-        //
+        return view('rayon.create');
     }
 
     /**
@@ -35,7 +36,11 @@ class RayonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Rayon::create([
+            'nama_rayon' => $request->nama_rayon,
+            'pembimbing' => $request->pembimbing
+        ]);
+        return redirect('/rayon');
     }
 
     /**
@@ -57,7 +62,8 @@ class RayonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rayon = Rayon::find($id);
+        return view('rayon.edit', compact('rayon'));
     }
 
     /**
@@ -69,7 +75,11 @@ class RayonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Rayon::find($id)->update([
+            'nama_rayon' => $request->nama_rayon,
+            'pembimbing' => $request->pembimbing
+        ]);
+        return redirect('/rayon');
     }
 
     /**
@@ -80,6 +90,7 @@ class RayonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Rayon::destroy($id);
+        return redirect('/rayon');
     }
 }

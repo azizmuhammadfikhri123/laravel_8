@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Siswa;
+// use App\Models\Rayon;
 
 class SiswaController extends Controller
 {
@@ -25,7 +26,8 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        return view('siswa.create');
+        $rayon = Rayon::all();
+        return view('siswa.create', compact('rayon'));
     }
 
     /**

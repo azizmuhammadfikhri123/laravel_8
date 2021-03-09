@@ -22,7 +22,7 @@
                 <a class="nav-link" href="/siswa">Siswa <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/rayon">Rayon</a>
+                <a class="nav-link" href="{{route('rayon.index')}}">Rayon</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Disabled</a>

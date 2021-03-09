@@ -12,4 +12,9 @@ class Siswa extends Model
 
     protected $table = 'siswas';
     protected $fillable = ['nama', 'alamat', 'no_hp', 'id_rayon', 'rombel'];
+
+    public function Rayon()
+    {
+        return $this->hasOne(Rayon::class, 'id' , 'nama_rayon');
+    }
 }

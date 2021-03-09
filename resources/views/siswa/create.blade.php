@@ -1,5 +1,5 @@
 @extends('layout.main')
- @section('title', 'Halaman index')
+@section('title', 'Halaman create')
 @section('content')
     <div class="card">
         <div class="card-body">

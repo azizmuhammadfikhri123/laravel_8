@@ -10,4 +10,9 @@ class Rayon extends Model
     use HasFactory;
     protected $tabel = 'rayons';
     protected $fillable = ['nama_rayon', 'pembimbing'];
+
+    public function Siswa()
+    {
+        return $this->belongsTo(Siswa::class);
+    }
 }
